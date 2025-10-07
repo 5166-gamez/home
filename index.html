@@ -8,14 +8,20 @@
 </head>
 <body>
   <header>
-    <h1>wip version ya its new</h1>
-    <nav>
-      <button onclick="loadSection('home')">Home</button>
-      <button onclick="loadSection('games')">Games</button>
-      <button onclick="loadSection('news')">News</button>
-      <button onclick="loadSection('contact')">Contact</button>
-    </nav>
-  </header>
+  <h1>wip version ya its new</h1>
+  <nav>
+    <button onclick="loadSection('home')">Home</button>
+    <button onclick="loadSection('games')">Games</button>
+    <button onclick="loadSection('news')">News</button>
+    <button onclick="loadSection('contact')">Contact</button>
+
+    <!-- Theme selector -->
+    <select id="theme-selector" onchange="changeTheme(this.value)">
+      <option value="dark" selected>Dark</option>
+      <option value="light">Light</option>
+    </select>
+  </nav>
+</header>
 
   <main id="content"></main>
 
