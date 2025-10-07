@@ -34,9 +34,9 @@ function loadSection(section) {
 
 function loadGames() {
   const games = [
-    { name: "Slope", embed: `<iframe src='https://slopegame.lol/play/slope' width='800' height='600' frameborder='0' allowfullscreen></iframe>` },
-    { name: "Run 3", embed: `<iframe src='https://player03.com/run/3/beta' width='800' height='600' frameborder='0' allowfullscreen></iframe>` },
-    { name: "Cookie Clicker", embed: `<iframe src='https://cookieclicker.ee' width='800' height='600' frameborder='0' allowfullscreen></iframe>` }
+    { name: "Slope", embed: `<iframe src='https://kdata1.com/2020/05/slope' width='800' height='600' frameborder='0' allowfullscreen></iframe>` },
+    { name: "Run 3", embed: `<iframe src='https://lekug.github.io/tn6pS9dCf37xAhkJv' width='800' height='600' frameborder='0' allowfullscreen></iframe>` },
+    { name: "Cookie Clicker", embed: `<iframe src='https://advanced-channeler.02.gz-associates.com' width='800' height='600' frameborder='0' allowfullscreen></iframe>` }
   ];
 
   content.innerHTML = `
