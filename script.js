@@ -35,6 +35,7 @@ function loadSection(section) {
 function loadGames() {
   const games = [
     { name: "Slope", src: "https://kdata1.com/2020/05/slope" },
+    { name: "bonk.io", src: "https://bonk.io" },
     { name: "Run 3", src: "https://lekug.github.io/tn6pS9dCf37xAhkJv" },
     { name: "Cookie Clicker", src: "https://advanced-channeler.02.gz-associates.com/?t=tmm-cookieclicker" },
     { name: "Drift Boss", src: "https://www.hoodamath.com/mobile/games/drift-boss/game.html" },
