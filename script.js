@@ -58,6 +58,12 @@ function loadGames() {
 function showGame(embedHTML) {
   const frame = document.getElementById("game-frame");
   frame.innerHTML = embedHTML;
+
+  // Add load/error handlers
+  const iframe = frame.querySelector("iframe");
+  iframe.addEventListener("error", () => {
+    frame.innerHTML = "<p>Sorry, this game couldn't load.</p>";
+  });
 }
 
 // Load home section first
