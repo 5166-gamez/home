@@ -34,15 +34,14 @@ function loadSection(section) {
 
 function loadGames() {
   const games = [
-    { name: "Slope", embed: `<iframe src='https://kdata1.com/2020/05/slope' width='800' height='600' frameborder='0' allowfullscreen></iframe>` },
-    { name: "Run 3", embed: `<iframe src='https://lekug.github.io/tn6pS9dCf37xAhkJv' width='800' height='600' frameborder='0' allowfullscreen></iframe>` },
-    { name: "Cookie Clicker", embed: `<iframe src='https://advanced-channeler.02.gz-associates.com' width='800' height='600' frameborder='0' allowfullscreen></iframe>` }
+    { name: "Slope", src: "https://kdata1.com/2020/05/slope" },
+    { name: "Run 3", src: "https://lekug.github.io/tn6pS9dCf37xAhkJv" },
+    { name: "Cookie Clicker", src: "https://advanced-channeler.02.gz-associates.com" }
   ];
 
   content.innerHTML = `
     <h2>Games</h2>
     <div id="game-list"></div>
-    <div id="game-frame" style="margin-top:20px;"></div>
   `;
 
   const list = document.getElementById("game-list");
@@ -50,9 +49,25 @@ function loadGames() {
   games.forEach(g => {
     const btn = document.createElement("button");
     btn.textContent = g.name;
-    btn.addEventListener("click", () => showGame(g.embed));
+    btn.addEventListener("click", () => openGamePage(g));
     list.appendChild(btn);
   });
+}
+
+function openGamePage(game) {
+  content.innerHTML = `
+    <div class="game-page">
+      <button id="back-button">← Back to Games</button>
+      <h2>${game.name}</h2>
+      <div class="game-container">
+        <iframe src="${game.src}" width="900" height="600" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  `;
+
+  // back button logic
+  const backBtn = document.getElementById("back-button");
+  backBtn.addEventListener("click", () => loadSection("games"));
 }
 
 function showGame(embedHTML) {
