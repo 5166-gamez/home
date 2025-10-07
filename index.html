@@ -8,19 +8,31 @@
   <link id="theme-link" rel="stylesheet" href="themes/dark.css">
 </head>
 <body>
-  <header>
-    <nav>
+  <header id="main-header">
+  <nav>
+    <div class="nav-left">
       <button onclick="loadSection('home')">Home</button>
       <button onclick="loadSection('games')">Games</button>
       <button onclick="loadSection('news')">News</button>
       <button onclick="loadSection('contact')">Contact</button>
+    </div>
+
+    <div class="nav-right">
+      <button id="theme-button" onclick="toggleThemeMenu()">
+        <img src="icons/theme.png" alt="Themes">
+      </button>
 
       <select id="theme-selector" onchange="changeTheme(this.value)">
         <option value="dark" selected>Dark</option>
         <option value="light">Light</option>
       </select>
-    </nav>
-  </header>
+
+      <button id="toggle-header-btn" onclick="toggleHeader()">
+        <img id="arrow-icon" src="icons/arrow-up.png" alt="Collapse">
+      </button>
+    </div>
+  </nav>
+</header>
 
   <main id="content"></main>
 
