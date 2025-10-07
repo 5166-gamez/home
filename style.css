@@ -33,3 +33,26 @@ iframe {
   max-width: 90vw;
   height: 600px;
 }
+
+.game-page {
+  text-align: center;
+}
+
+#back-button {
+  margin-bottom: 15px;
+  padding: 8px 16px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#back-button:hover {
+  background: #555;
+}
+
+.game-container iframe {
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
