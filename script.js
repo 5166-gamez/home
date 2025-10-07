@@ -23,7 +23,7 @@ function loadSection(section) {
     case "contact":
       content.innerHTML = `
         <h2>Contact Us</h2>
-        <p>Email: example@example.com</p>
+        <p>Email: 5166-gamez@gmail.com</p>
       `;
       break;
 
