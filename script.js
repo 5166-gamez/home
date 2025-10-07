@@ -82,4 +82,25 @@ function showGame(embedHTML) {
   }
 }
 
+function changeTheme(theme) {
+  const body = document.body;
+  const selector = document.getElementById("theme-selector");
+
+  if (theme === "light") {
+    body.classList.add("light-theme");
+    selector.value = "light";
+    localStorage.setItem("theme", "light");
+  } else {
+    body.classList.remove("light-theme");
+    selector.value = "dark";
+    localStorage.setItem("theme", "dark");
+  }
+}
+
+// Load saved theme on startup
+(function initTheme() {
+  const savedTheme = localStorage.getItem("theme") || "dark";
+  changeTheme(savedTheme);
+})();
+
 loadSection("home");
