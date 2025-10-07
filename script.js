@@ -107,13 +107,7 @@ function toggleHeader() {
   const arrow = document.getElementById("arrow-icon");
 
   header.classList.toggle("hidden");
-
-  // Flip the arrow depending on header state
-  if (header.classList.contains("hidden")) {
-    arrow.src = "icons/arrow-down.png";
-  } else {
-    arrow.src = "icons/arrow-up.png";
-  }
+  arrow.classList.toggle("rotated");
 }
 
 loadSection("home");
