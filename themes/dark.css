@@ -1,0 +1,17 @@
+body {
+  background: #111;
+  color: #fff;
+}
+
+header {
+  background: #222;
+}
+
+nav button {
+  background: #333;
+  color: #fff;
+}
+
+nav button:hover {
+  background: #555;
+}
