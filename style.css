@@ -1,0 +1,35 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+}
+
+header {
+  background: #222;
+  padding: 1em;
+  position: sticky;
+  top: 0;
+}
+
+nav button {
+  background: #333;
+  color: #fff;
+  border: none;
+  margin: 0 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+nav button:hover {
+  background: #555;
+}
+
+iframe {
+  border: none;
+  max-width: 90vw;
+  height: 600px;
+}
