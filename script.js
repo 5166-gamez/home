@@ -91,11 +91,29 @@ function changeTheme(theme) {
   localStorage.setItem('theme', theme); // save preference
 }
 
-// On page load, restore theme
 document.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('theme') || 'dark';
   changeTheme(saved);
   document.getElementById('theme-selector').value = saved;
 });
+
+function toggleThemeMenu() {
+  const selector = document.getElementById("theme-selector");
+  selector.style.display = selector.style.display === "block" ? "none" : "block";
+}
+
+function toggleHeader() {
+  const header = document.getElementById("main-header");
+  const arrow = document.getElementById("arrow-icon");
+
+  header.classList.toggle("hidden");
+
+  // Flip the arrow depending on header state
+  if (header.classList.contains("hidden")) {
+    arrow.src = "icons/arrow-down.png";
+  } else {
+    arrow.src = "icons/arrow-up.png";
+  }
+}
 
 loadSection("home");
