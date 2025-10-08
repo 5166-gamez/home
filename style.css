@@ -1,32 +1,24 @@
 /* ---------------------------------------------------
-   Global styles — always apply, independent of theme
+   Header and button layout
 --------------------------------------------------- */
-body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 0;
+
+header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 20px;
 }
 
-header {
-  padding: 1em;
-  position: sticky;
-  top: 0;
+/* Left side: page indicator + nav buttons */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
-nav button {
-  margin: 0 5px;
-  padding: 10px 15px;
-  cursor: pointer;
-  border: none;
-  border-radius: 6px;
-  transition: background 0.2s;
-}
-
+/* Page indicator stays on far left, before nav buttons */
 #page-indicator {
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -42,49 +34,8 @@ nav button {
   font-size: 18px;
 }
 
-iframe {
-  border: none;
-  max-width: 90vw;
-  height: 600px;
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-#theme-selector {
-  margin-left: 10px;
-  padding: 8px 10px;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-.game-page {
-  text-align: center;
-}
-
-#back-button {
-  margin-bottom: 15px;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-.game-container iframe {
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-/* ---------------------------------------------------
-   Header and button layout
---------------------------------------------------- */
-
-/* Right-aligned nav buttons */
+/* Right-aligned buttons (themes) */
 .nav-right {
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -162,7 +113,6 @@ header.hidden {
   transition: transform 0.3s ease;
 }
 
-/* Adjust body padding when header hidden (optional) */
 body.header-hidden {
   padding-top: 0;
 }
