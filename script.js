@@ -25,7 +25,7 @@ function loadSection(section) {
       loadGames();
       break;
 
-    case "news":
+    case "changelogs":
       content.innerHTML = `
         <h2>Changelog</h2>
         <p>TBA</p>
