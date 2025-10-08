@@ -1,11 +1,22 @@
 const content = document.getElementById("content");
 
+function updateHeader(section) {
+  const icon = document.getElementById("page-icon");
+  const name = document.getElementById("page-name");
+
+  // Update icon + label based on section
+  icon.src = `icons/pageicons/${section}.png`;
+  name.textContent = section.charAt(0).toUpperCase() + section.slice(1);
+}
+
 function loadSection(section) {
+  updateHeader(section);
+
   switch (section) {
     case "home":
       content.innerHTML = `
-        <h2>Welcome!</h2>
-        <p>Pick a game and start playing instantly.</p>
+        <h2>5166 Gamez!</h2>
+        <p>this site is wip please let me add more stuff</p>
       `;
       break;
 
@@ -15,8 +26,8 @@ function loadSection(section) {
 
     case "news":
       content.innerHTML = `
-        <h2>Game News</h2>
-        <p>We'll post updates and announcements here soon!</p>
+        <h2>Changelog</h2>
+        <p>TBA</p>
       `;
       break;
 
