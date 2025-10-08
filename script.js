@@ -106,7 +106,6 @@ function changeTheme(theme) {
 document.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('theme') || 'dark';
   changeTheme(saved);
-  document.getElementById('theme-selector').value = saved;
 });
 
 function toggleThemeMenu() {
