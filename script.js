@@ -1,3 +1,4 @@
+// test line to see if its actually building
 const content = document.getElementById("content");
 
 function updateHeader(section) {
