@@ -98,16 +98,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function toggleThemeMenu() {
-  const selector = document.getElementById("theme-selector");
-  selector.style.display = selector.style.display === "block" ? "none" : "block";
+  const menu = document.getElementById("theme-menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
 
+// Collapse/Expand header
 function toggleHeader() {
   const header = document.getElementById("main-header");
   const arrow = document.getElementById("arrow-icon");
+  const toggleBtn = document.getElementById("toggle-header-btn");
 
-  header.classList.toggle("hidden");
-  arrow.classList.toggle("rotated");
+  const hidden = header.classList.toggle("hidden");
+  arrow.classList.toggle("rotated", hidden);
+
+  // Adjust button position slightly when collapsed
+  toggleBtn.style.top = hidden ? "10px" : "70px";
 }
 
 loadSection("home");
