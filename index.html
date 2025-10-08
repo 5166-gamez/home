@@ -9,32 +9,34 @@
 </head>
 <body>
   <header id="main-header">
-    <nav>
-      <div class="nav-left">
-        <button onclick="loadSection('home')">Home</button>
-        <button onclick="loadSection('games')">Games</button>
-        <button onclick="loadSection('news')">News</button>
-        <button onclick="loadSection('contact')">Contact</button>
+  <nav>
+    <div class="nav-left">
+      <div id="page-indicator">
+        <img id="page-icon" src="icons/pageicons/home.png" alt="Page Icon">
+        <span id="page-name">Home</span>
       </div>
 
-      <div class="nav-right">
-        <!-- Theme Button -->
-        <div class="theme-container">
-          <button id="theme-button" onclick="toggleThemeMenu()">
-            <img src="icons/themeswhite.png" alt="Themes">
-          </button>
+      <button onclick="loadSection('home')">Home</button>
+      <button onclick="loadSection('games')">Games</button>
+      <button onclick="loadSection('news')">News</button>
+      <button onclick="loadSection('contact')">Contact</button>
+    </div>
 
-          <div id="theme-menu">
-            <button onclick="changeTheme('dark')">Dark</button>
-            <button onclick="changeTheme('light')">Light</button>
-            <button onclick="changeTheme('crimson')">Crimson</button>
-            <button onclick="changeTheme('midnight')">Midnight</button>
-          </div>
+    <div class="nav-right">
+      <div class="theme-container">
+        <button id="theme-button" onclick="toggleThemeMenu()">
+          <img src="icons/themeswhite.png" alt="Themes">
+        </button>
+        <div id="theme-menu">
+          <button onclick="changeTheme('dark')">Dark</button>
+          <button onclick="changeTheme('light')">Light</button>
+          <button onclick="changeTheme('crimson')">Crimson</button>
+          <button onclick="changeTheme('midnight')">Midnight</button>
         </div>
       </div>
-    </nav>
-  </header>
-
+    </div>
+  </nav>
+</header>
   <!-- Collapse button outside header -->
   <button id="toggle-header-btn" onclick="toggleHeader()">
     <img id="arrow-icon" src="icons/collapsewhite.png" alt="Collapse">
