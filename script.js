@@ -35,7 +35,7 @@ function loadSection(section) {
     case "contact":
   content.innerHTML = `
     <h2>Contact Us</h2>
-    <p>If you have any questions, feedback, or suggestions, please fill out the form below:</p>
+    <p>Fill out the form below to suggest a game:</p>
     <iframe 
       src="https://docs.google.com/forms/d/e/1FAIpQLSfTl_4-B2gHmKEfpPzcFmRuFvSs_BfqOgZidXwgy8iGI4q8Iw/viewform?embedded=true" 
       width="640" 
