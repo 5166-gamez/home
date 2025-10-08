@@ -49,7 +49,7 @@ function loadGames() {
   //  { name: "Slope", src: "https://kdata1.com/2020/05/slope" },
     { name: "bonk.io", src: "https://bonk.io" },
     { name: "Run 3", src: "https://lekug.github.io/tn6pS9dCf37xAhkJv" },
-   // { name: "Cookie Clicker", src: "https://advanced-channeler.02.gz-associates.com/?t=tmm-cookieclicker" },
+    { name: "Cookie Clicker", src: "https://advanced-channeler.02.gz-associates.com/?t=tmm-cookieclicker" },
     { name: "Drift Boss", src: "https://www.hoodamath.com/mobile/games/drift-boss/game.html" },
     { name: "Four Colors Multiplayer", src: "https://html5.gamedistribution.com/rvvASMiM/f2520bae00624e93a4f4614732fa259e/index.html?gd_sdk_referrer_url=https://en.onlygames.io/games/card/four-colors-multiplayer.html&gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL2VuLm9ubHlnYW1lcy5pby9nYW1lcy9jYXJkL2ZvdXItY29sb3JzLW11bHRpcGxheWVyLmh0bWwiLCJwYXJlbnREb21haW4iOiJlbi5vbmx5Z2FtZXMuaW8iLCJ0b3BEb21haW4iOiJlbi5vbmx5Z2FtZXMuaW8iLCJoYXNJbXByZXNzaW9uIjpmYWxzZSwibG9hZGVyRW5hYmxlZCI6dHJ1ZSwiaG9zdCI6Imh0bWw1LmdhbWVkaXN0cmlidXRpb24uY29tIiwidmVyc2lvbiI6IjEuNS4xNyJ9" } // probably get a smaller link for this 
   ];
