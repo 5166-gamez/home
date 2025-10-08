@@ -16,7 +16,7 @@ function loadSection(section) {
   switch (section) {
     case "home":
       content.innerHTML = `
-        <h2>5166 Gamez</h2>
+        <h2>5166Hub</h2>
         <p>this site is wip please let me add more stuff</p>
       `;
       break;
