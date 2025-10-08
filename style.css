@@ -22,6 +22,24 @@ nav button {
   transition: background 0.2s;
 }
 
+#page-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-right: 20px;
+}
+
+#page-indicator img {
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+#page-indicator span {
+  font-weight: bold;
+  font-size: 18px;
+}
+
 iframe {
   border: none;
   max-width: 90vw;
