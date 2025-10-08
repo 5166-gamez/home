@@ -10,18 +10,21 @@
 <body>
   <header id="main-header">
   <nav>
-    <div class="nav-left">
-      <div id="page-indicator">
-        <img id="page-icon" src="icons/pageicons/home.png" alt="Page Icon">
-        <span id="page-name">Home</span>
-      </div>
+    <!-- Page indicator on far left -->
+    <div id="page-indicator">
+      <img id="page-icon" src="icons/pageicons/home.png" alt="Page Icon">
+      <span id="page-name">Home</span>
+    </div>
 
+    <!-- Navigation buttons (centered) -->
+    <div class="nav-left">
       <button onclick="loadSection('home')">Home</button>
       <button onclick="loadSection('games')">Games</button>
       <button onclick="loadSection('changelogs')">Changelogs</button>
       <button onclick="loadSection('contact')">Contact</button>
     </div>
 
+    <!-- Theme dropdown on far right -->
     <div class="nav-right">
       <div class="theme-container">
         <button id="theme-button" onclick="toggleThemeMenu()">
@@ -37,6 +40,7 @@
     </div>
   </nav>
 </header>
+
   <!-- Collapse button outside header -->
   <button id="toggle-header-btn" onclick="toggleHeader()">
     <img id="arrow-icon" src="icons/collapsewhite.png" alt="Collapse">
