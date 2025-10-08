@@ -10,14 +10,13 @@ header nav {
   padding: 0 20px;
 }
 
-/* Left side: page indicator + nav buttons */
+/* Left: page indicator */
 .nav-left {
+  flex: 1;
   display: flex;
   align-items: center;
-  gap: 15px;
 }
 
-/* Page indicator stays on far left, before nav buttons */
 #page-indicator {
   display: flex;
   align-items: center;
@@ -34,9 +33,20 @@ header nav {
   font-size: 18px;
 }
 
-/* Right-aligned buttons (themes) */
-.nav-right {
+/* Center: nav buttons */
+.nav-center {
+  flex: 1;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Right: theme controls */
+.nav-right {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
   gap: 10px;
 }
