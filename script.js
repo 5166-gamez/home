@@ -75,7 +75,7 @@ function openGamePage(game) {
       <button id="back-button">← Back to Games</button>
       <h2>${game.name}</h2>
       <div class="game-container">
-        <iframe src="${game.src}" width="900" height="600" frameborder="0" allowfullscreen></iframe>
+        <iframe src="${game.src}" width="1920" height="1080" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   `;
