@@ -9,33 +9,36 @@
 </head>
 <body>
   <header id="main-header">
-  <nav>
-    <div class="nav-left">
-      <button onclick="loadSection('home')">Home</button>
-      <button onclick="loadSection('games')">Games</button>
-      <button onclick="loadSection('news')">News</button>
-      <button onclick="loadSection('contact')">Contact</button>
-    </div>
+    <nav>
+      <div class="nav-left">
+        <button onclick="loadSection('home')">Home</button>
+        <button onclick="loadSection('games')">Games</button>
+        <button onclick="loadSection('news')">News</button>
+        <button onclick="loadSection('contact')">Contact</button>
+      </div>
 
-    <div class="nav-right">
-      <button id="theme-button" onclick="toggleThemeMenu()">
-        <img src="icons/themes.png" alt="Themes">
-      </button>
+      <div class="nav-right">
+        <!-- Theme Button -->
+        <div class="theme-container">
+          <button id="theme-button" onclick="toggleThemeMenu()">
+            <img src="icons/themes" alt="Themes">
+          </button>
 
-      <select id="theme-selector" onchange="changeTheme(this.value)">
-        <option value="dark" selected>Dark</option>
-        <option value="light">Light</option>
-      </select>
+          <div id="theme-menu">
+            <button onclick="changeTheme('dark')">Dark</button>
+            <button onclick="changeTheme('light')">Light</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-      <button id="toggle-header-btn" onclick="toggleHeader()">
-        <img id="arrow-icon" src="icons/arrow-up.png" alt="Collapse">
-      </button>
-    </div>
-  </nav>
-</header>
+  <!-- Collapse button outside header -->
+  <button id="toggle-header-btn" onclick="toggleHeader()">
+    <img id="arrow-icon" src="icons/arrow" alt="Collapse">
+  </button>
 
   <main id="content"></main>
-
   <script src="script.js"></script>
 </body>
 </html>
