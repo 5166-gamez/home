@@ -10,18 +10,23 @@
 <body>
   <header id="main-header">
   <nav>
+  <!-- Page indicator (far left) -->
   <div class="nav-left">
     <div id="page-indicator">
       <img id="page-icon" src="icons/pageicons/home.png" alt="Page Icon">
       <span id="page-name">Home</span>
     </div>
+  </div>
 
+  <!-- Center navigation buttons -->
+  <div class="nav-center">
     <button onclick="loadSection('home')">Home</button>
     <button onclick="loadSection('games')">Games</button>
     <button onclick="loadSection('changelogs')">Changelogs</button>
     <button onclick="loadSection('contact')">Contact</button>
   </div>
 
+  <!-- Right side: theme button -->
   <div class="nav-right">
     <div class="theme-container">
       <button id="theme-button" onclick="toggleThemeMenu()">
