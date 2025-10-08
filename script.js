@@ -33,11 +33,21 @@ function loadSection(section) {
       break;
 
     case "contact":
-      content.innerHTML = `
-        <h2>Contact Us</h2>
-        <p>Email: 5166-gamez@gmail.com</p>
-      `;
-      break;
+  content.innerHTML = `
+    <h2>Contact Us</h2>
+    <p>If you have any questions, feedback, or suggestions, please fill out the form below:</p>
+    <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSfTl_4-B2gHmKEfpPzcFmRuFvSs_BfqOgZidXwgy8iGI4q8Iw/viewform?embedded=true" 
+      width="640" 
+      height="834" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0"
+      style="border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.2); max-width: 90vw;">
+      Loading…
+    </iframe>
+  `;
+  break;
 
     default:
       loadSection("home");
