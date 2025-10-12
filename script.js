@@ -16,7 +16,7 @@ function loadSection(section) {
   switch (section) {
     case "home":
       content.innerHTML = `
-        <h2>5166Hub</h2>
+        <h2>5166 Gamez</h2>
         <p>this site is wip please let me add more stuff</p>
       `;
       break;
@@ -26,32 +26,114 @@ function loadSection(section) {
       break;
 
     case "changelogs":
-      content.innerHTML = `
-        <h2>Changelog</h2>
-        <p>TBA</p>
-      `;
+      loadChangelogs();
       break;
 
     case "contact":
-  content.innerHTML = `
-    <h2>Contact Us</h2>
-    <p>Fill out the form below to suggest a game:</p>
-    <iframe 
-      src="https://docs.google.com/forms/d/e/1FAIpQLSfTl_4-B2gHmKEfpPzcFmRuFvSs_BfqOgZidXwgy8iGI4q8Iw/viewform?embedded=true" 
-      width="640" 
-      height="834" 
-      frameborder="0" 
-      marginheight="0" 
-      marginwidth="0"
-      style="border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.2); max-width: 90vw;">
-      Loading…
-    </iframe>
-  `;
-  break;
+      content.innerHTML = `
+        <h2>Contact Us</h2>
+        <p>Fill out the form below to suggest a game:</p>
+        <iframe 
+          src="https://docs.google.com/forms/d/e/1FAIpQLSfTl_4-B2gHmKEfpPzcFmRuFvSs_BfqOgZidXwgy8iGI4q8Iw/viewform?embedded=true" 
+          width="640" 
+          height="834" 
+          frameborder="0" 
+          marginheight="0" 
+          marginwidth="0"
+          style="border-radius: 12px; box-shadow: 0 0 15px rgba(0,0,0,0.2); max-width: 90vw;">
+          Loading…
+        </iframe>
+      `;
+      break;
 
     default:
       loadSection("home");
   }
+}
+
+function loadChangelogs() {
+  const changelogs = [
+    {
+      name: "Test",
+      version: "v0.1.0",
+      date: "10/11/25",
+      changes: [
+        {
+          title: "games",
+          items: [
+            "poop simulator",
+            "new game idk"
+          ]
+        },
+        {
+          title: "fixes",
+          items: [
+            "fixed something",
+            "oh ya"
+          ]
+        }
+      ]
+    },
+    {
+      name: "Test 2",
+      version: "v0.0.0",
+      date: "10/11/25",
+      changes: [
+        {
+          title: "poop",
+          items: [
+            "u can poop now",
+            "and pee"
+          ]
+        }
+      ]
+    }
+  ];
+
+  content.innerHTML = `
+    <h2>Changelogs</h2>
+    <div id="changelog-list" style="display: flex; flex-direction: column; gap: 20px;"></div>
+  `;
+
+  const list = document.getElementById("changelog-list");
+
+  changelogs.forEach(log => {
+    const container = document.createElement("div");
+    container.className = "changelog-block";
+    container.style.cssText = `
+      background: var(--panel-bg, #1a1a1a);
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      overflow-y: auto;
+      max-height: 250px;
+    `;
+
+    const header = document.createElement("h3");
+    header.textContent = `${log.name} [${log.version}] - ${log.date}`;
+    header.style.marginBottom = "10px";
+    header.style.color = "var(--accent, #00c6ff)";
+
+    const body = document.createElement("div");
+    log.changes.forEach(section => {
+      const secTitle = document.createElement("p");
+      secTitle.textContent = `- ${section.title}:`;
+      secTitle.style.fontWeight = "bold";
+      body.appendChild(secTitle);
+
+      const ul = document.createElement("ul");
+      section.items.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        ul.appendChild(li);
+      });
+      body.appendChild(ul);
+    });
+
+    container.appendChild(header);
+    container.appendChild(body);
+    list.appendChild(container);
+  });
 }
 
 function loadGames() {
