@@ -82,7 +82,7 @@ function loadGames() {
 function openGamePage(game) {
   content.innerHTML = `
     <div class="game-page">
-      <button id="back-button">← Back to Games</button>
+      <button id="back-button">← Back</button>
       <h2>${game.name}</h2>
       <div class="game-container">
         <iframe src="${game.src}" width="1920" height="1080" frameborder="0" allowfullscreen></iframe>
