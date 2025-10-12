@@ -4,7 +4,10 @@
   --header-bg: #222;
   --button-bg: #333;
   --button-hover: #555;
+  --panel-bg: #1a1a1a;
+  --accent: #00c6ff;
 }
+
 
 body {
   font-family: Arial, sans-serif;
