@@ -136,6 +136,11 @@ body.header-hidden {
   max-height: 250px;
   scrollbar-width: thin;
   transition: background 0.3s ease, color 0.3s ease;
+
+  max-width: 800px;
+  margin: 0 auto;
+  width: 90%;
+  box-sizing: border-box;
 }
 
 .changelog-block h3 {
