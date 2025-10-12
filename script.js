@@ -51,45 +51,7 @@ function loadSection(section) {
   }
 }
 
-function loadChangelogs() {
-  const changelogs = [
-    {
-      name: "Test",
-      version: "v0.1.0",
-      date: "10/11/25",
-      changes: [
-        {
-          title: "games",
-          items: [
-            "poop simulator",
-            "new game idk"
-          ]
-        },
-        {
-          title: "fixes",
-          items: [
-            "fixed something",
-            "oh ya"
-          ]
-        }
-      ]
-    },
-    {
-      name: "Test 2",
-      version: "v0.0.0",
-      date: "10/11/25",
-      changes: [
-        {
-          title: "poop",
-          items: [
-            "u can poop now",
-            "and pee"
-          ]
-        }
-      ]
-    }
-  ];
-
+async function loadChangelogs() {
   content.innerHTML = `
     <h2>Changelogs</h2>
     <div id="changelog-list" style="display: flex; flex-direction: column; gap: 20px;"></div>
@@ -97,43 +59,57 @@ function loadChangelogs() {
 
   const list = document.getElementById("changelog-list");
 
-  changelogs.forEach(log => {
-    const container = document.createElement("div");
-    container.className = "changelog-block";
-    container.style.cssText = `
-      background: var(--panel-bg, #1a1a1a);
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      overflow-y: auto;
-      max-height: 250px;
-    `;
+  try {
+    // Fetch list of changelogs (you'll maintain a simple index file)
+    const response = await fetch("changelogs/index.json");
+    const files = await response.json(); // e.g. ["v0.1.0.json", "v0.2.0.json"]
 
-    const header = document.createElement("h3");
-    header.textContent = `${log.name} [${log.version}] - ${log.date}`;
-    header.style.marginBottom = "10px";
-    header.style.color = "var(--accent, #00c6ff)";
+    for (const file of files.reverse()) { // newest first
+      const logData = await fetch(`changelogs/${file}`).then(r => r.json());
+      renderChangelog(list, logData);
+    }
+  } catch (err) {
+    console.error(err);
+    list.innerHTML = `<p>Failed to load changelogs.</p>`;
+  }
+}
 
-    const body = document.createElement("div");
-    log.changes.forEach(section => {
-      const secTitle = document.createElement("p");
-      secTitle.textContent = `- ${section.title}:`;
-      secTitle.style.fontWeight = "bold";
-      body.appendChild(secTitle);
+function renderChangelog(list, log) {
+  const container = document.createElement("div");
+  container.className = "changelog-block";
+  container.style.cssText = `
+    background: var(--panel-bg, #1a1a1a);
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    overflow-y: auto;
+    max-height: 250px;
+  `;
 
-      const ul = document.createElement("ul");
-      section.items.forEach(item => {
-        const li = document.createElement("li");
-        li.textContent = item;
-        ul.appendChild(li);
-      });
-      body.appendChild(ul);
+  const header = document.createElement("h3");
+  header.textContent = `${log.name} [${log.version}] - ${log.date}`;
+  header.style.marginBottom = "10px";
+  header.style.color = "var(--accent, #00c6ff)";
+
+  const body = document.createElement("div");
+  log.changes.forEach(section => {
+    const secTitle = document.createElement("p");
+    secTitle.textContent = `- ${section.title}:`;
+    secTitle.style.fontWeight = "bold";
+    body.appendChild(secTitle);
+
+    const ul = document.createElement("ul");
+    section.items.forEach(item => {
+      const li = document.createElement("li");
+      li.textContent = item;
+      ul.appendChild(li);
     });
-
-    container.appendChild(header);
-    container.appendChild(body);
-    list.appendChild(container);
+    body.appendChild(ul);
   });
+
+  container.appendChild(header);
+  container.appendChild(body);
+  list.appendChild(container);
 }
 
 function loadGames() {
