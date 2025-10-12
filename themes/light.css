@@ -1,9 +1,11 @@
 :root {
   --bg-color: #f9f9f9;
-  --text-color: #111;
-  --header-bg: #ddd;
-  --button-bg: #ccc;
-  --button-hover: #bbb;
+  --text-color: #000;
+  --header-bg: #fff;
+  --button-bg: #ddd;
+  --button-hover: #ccc;
+  --panel-bg: #f0f0f0;
+  --accent: #007acc;
 }
 
 body {
