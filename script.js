@@ -77,14 +77,6 @@ async function loadChangelogs() {
 function renderChangelog(list, log) {
   const container = document.createElement("div");
   container.className = "changelog-block";
-  container.style.cssText = `
-    background: var(--panel-bg, #1a1a1a);
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    overflow-y: auto;
-    max-height: 250px;
-  `;
 
   const header = document.createElement("h3");
   header.textContent = `${log.name} [${log.version}] - ${log.date}`;
