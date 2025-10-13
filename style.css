@@ -158,16 +158,9 @@ body.header-hidden {
   margin-bottom: 10px;
 }
 
-/* Game name and description */
 .game-name {
   font-size: 18px;
   margin: 5px 0;
-}
-
-.game-desc {
-  font-size: 14px;
-  opacity: 0.8;
-  margin-bottom: 10px;
 }
 
 /* Play button now fits the card width */
