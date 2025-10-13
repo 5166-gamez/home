@@ -123,21 +123,69 @@ body.header-hidden {
   padding-top: 0;
 }
 
+/* Game grid layout */
+.game-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Each game card */
+.game-card {
+  background: var(--panel-bg, #1a1a1a);
+  border: 2px solid white; /* white outline */
+  border-radius: 10px;
+  width: 220px;
+  padding: 15px;
+  box-sizing: border-box;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.4);
+}
+
+/* Game icon */
+.game-icon {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* Game name and description */
+.game-name {
+  font-size: 18px;
+  margin: 5px 0;
+}
+
+.game-desc {
+  font-size: 14px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+
+/* Play button now fits the card width */
 .play-btn {
   background: #007bff; /* bright blue */
   color: white;
-  border: 2px solid white; /* white outline */
+  border: 2px solid white;
   border-radius: 6px;
-  padding: 10px 0;
-  width: 100%; /* stretch across the card */
-  font-size: 16px;
+  padding: 8px 0;
+  width: 100%; /* now just fills the card width */
+  font-size: 15px;
   font-weight: bold;
   cursor: pointer;
   transition: background 0.2s, transform 0.1s;
 }
 
 .play-btn:hover {
-  background: #0056cc; /* darker blue when hovered */
+  background: #0056cc;
   transform: scale(1.02);
 }
 
