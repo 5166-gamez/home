@@ -1,6 +1,6 @@
 {
   "name": "bonk.io",
-  "icon": "icons/gameicons/bonkio.png",
+  "icon": "https://github.com/5166-gamez/home/blob/main/icons/gameicons/bonkio.png?raw=true",
   "src": "https://bonk.io",
   "description": "poop"
 }
