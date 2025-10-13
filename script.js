@@ -199,4 +199,13 @@ function toggleHeader() {
   toggleBtn.style.top = hidden ? "10px" : "70px";
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+  const githubBtn = document.getElementById("github-button");
+  if (githubBtn) {
+    githubBtn.addEventListener("click", () => {
+      window.open("https://github.com/5166-gamez/home", "_blank");
+    });
+  }
+});
+
 loadSection("home");
