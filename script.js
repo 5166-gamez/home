@@ -143,15 +143,20 @@ function renderGameCard(container, game) {
 function openGamePage(game) {
   content.innerHTML = `
     <div class="game-page">
-      <button id="back-button">← Back</button>
-      <h2>${game.name}</h2>
+      <div class="game-header">
+        <button id="back-button">← Back</button>
+        <div class="game-info">
+          <img src="${game.icon}" alt="${game.name}" class="game-header-icon">
+          <h2 class="game-header-title">${game.name}</h2>
+        </div>
+      </div>
+
       <div class="game-container">
         <iframe src="${game.src}" width="1920" height="1080" frameborder="0" allowfullscreen></iframe>
       </div>
     </div>
   `;
 
-  // back button logic
   const backBtn = document.getElementById("back-button");
   backBtn.addEventListener("click", () => loadSection("games"));
 }
