@@ -4,5 +4,6 @@
 
 ---
 
-## Blog
-hi uys
+# Blog
+## hi guys - 10/13/2025
+hi guys this is the first blog in the read me, im almost done with a bunch of internal stuff within the site so then i'll be able to actually start adding games and logging updates probably after this so congrats if u actually read this
