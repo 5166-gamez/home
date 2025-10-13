@@ -123,6 +123,24 @@ body.header-hidden {
   padding-top: 0;
 }
 
+.play-btn {
+  background: #007bff; /* bright blue */
+  color: white;
+  border: 2px solid white; /* white outline */
+  border-radius: 6px;
+  padding: 10px 0;
+  width: 100%; /* stretch across the card */
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.play-btn:hover {
+  background: #0056cc; /* darker blue when hovered */
+  transform: scale(1.02);
+}
+
 .changelog-block {
   background: var(--header-bg);
   border: 1px solid rgba(255,255,255,0.1);
