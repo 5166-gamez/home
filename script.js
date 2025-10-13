@@ -104,29 +104,42 @@ function renderChangelog(list, log) {
   list.appendChild(container);
 }
 
-function loadGames() {
-  const games = [
-  //  { name: "Slope", src: "https://kdata1.com/2020/05/slope" },
-    { name: "bonk.io", src: "https://bonk.io" },
-    { name: "Run 3", src: "https://lekug.github.io/tn6pS9dCf37xAhkJv" },
-    { name: "Cookie Clicker", src: "https://advanced-channeler.02.gz-associates.com/?t=tmm-cookieclicker" },
-    { name: "Drift Boss", src: "https://www.hoodamath.com/mobile/games/drift-boss/game.html" },
-    { name: "Four Colors Multiplayer", src: "https://html5.gamedistribution.com/rvvASMiM/f2520bae00624e93a4f4614732fa259e/index.html?gd_sdk_referrer_url=https://en.onlygames.io/games/card/four-colors-multiplayer.html&gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL2VuLm9ubHlnYW1lcy5pby9nYW1lcy9jYXJkL2ZvdXItY29sb3JzLW11bHRpcGxheWVyLmh0bWwiLCJwYXJlbnREb21haW4iOiJlbi5vbmx5Z2FtZXMuaW8iLCJ0b3BEb21haW4iOiJlbi5vbmx5Z2FtZXMuaW8iLCJoYXNJbXByZXNzaW9uIjpmYWxzZSwibG9hZGVyRW5hYmxlZCI6dHJ1ZSwiaG9zdCI6Imh0bWw1LmdhbWVkaXN0cmlidXRpb24uY29tIiwidmVyc2lvbiI6IjEuNS4xNyJ9" } // probably get a smaller link for this 
-  ];
-
+async function loadGames() {
   content.innerHTML = `
     <h2>Games</h2>
-    <div id="game-list"></div>
+    <div id="game-grid" class="game-grid"></div>
   `;
 
-  const list = document.getElementById("game-list");
+  const grid = document.getElementById("game-grid");
 
-  games.forEach(g => {
-    const btn = document.createElement("button");
-    btn.textContent = g.name;
-    btn.addEventListener("click", () => openGamePage(g));
-    list.appendChild(btn);
-  });
+  try {
+    // Get the list of JSON files
+    const res = await fetch("games/index.json");
+    const files = await res.json();
+
+    for (const file of files) {
+      const gameData = await fetch(`games/${file}`).then(r => r.json());
+      renderGameCard(grid, gameData);
+    }
+  } catch (err) {
+    console.error(err);
+    grid.innerHTML = "<p>Failed to load games.</p>";
+  }
+}
+
+function renderGameCard(container, game) {
+  const card = document.createElement("div");
+  card.className = "game-card";
+
+  card.innerHTML = `
+    <img src="${game.icon}" alt="${game.name}" class="game-icon">
+    <h3 class="game-name">${game.name}</h3>
+    <p class="game-desc">${game.description || ""}</p>
+    <button class="play-btn">Play</button>
+  `;
+
+  card.querySelector(".play-btn").addEventListener("click", () => openGamePage(game));
+  container.appendChild(card);
 }
 
 function openGamePage(game) {
