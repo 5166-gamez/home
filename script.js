@@ -80,15 +80,14 @@ function renderChangelog(list, log) {
 
   const header = document.createElement("h3");
   header.textContent = `${log.name} [${log.version}] - ${log.date}`;
-  header.style.marginBottom = "10px";
-  header.style.color = "var(--accent, #00c6ff)";
+  container.appendChild(header);
 
   const body = document.createElement("div");
+
   log.changes.forEach(section => {
-    const secTitle = document.createElement("p");
-    secTitle.textContent = `- ${section.title}:`;
-    secTitle.style.fontWeight = "bold";
-    body.appendChild(secTitle);
+    const title = document.createElement("p");
+    title.textContent = `• ${section.title}`;
+    body.appendChild(title);
 
     const ul = document.createElement("ul");
     section.items.forEach(item => {
@@ -99,7 +98,6 @@ function renderChangelog(list, log) {
     body.appendChild(ul);
   });
 
-  container.appendChild(header);
   container.appendChild(body);
   list.appendChild(container);
 }
