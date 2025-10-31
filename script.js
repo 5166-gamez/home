@@ -17,7 +17,7 @@ function loadSection(section) {
     case "home":
       content.innerHTML = `
         <h2>5166 Gamez</h2>
-        <p>this site is wip please let me add more stuff</p>
+        <p>USE https://5166-gamez.github.io/home/, CLOUDFLARE PAGES MIGHT BE BLOCKED FOR MOST SCHOOLS</p>
       `;
       break;
 
@@ -60,9 +60,9 @@ async function loadChangelogs() {
   const list = document.getElementById("changelog-list");
 
   try {
-    // Fetch list of changelogs (you'll maintain a simple index file)
+    // Fetch list of changelogs
     const response = await fetch("changelogs/index.json");
-    const files = await response.json(); // e.g. ["v0.1.0.json", "v0.2.0.json"]
+    const files = await response.json();
 
     for (const file of files.reverse()) { // newest first
       const logData = await fetch(`changelogs/${file}`).then(r => r.json());
@@ -198,7 +198,6 @@ function toggleHeader() {
   const hidden = header.classList.toggle("hidden");
   arrow.classList.toggle("rotated", hidden);
 
-  // Adjust button position slightly when collapsed
   toggleBtn.style.top = hidden ? "10px" : "70px";
 }
 
