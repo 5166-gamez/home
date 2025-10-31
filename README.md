@@ -6,6 +6,7 @@
 # Links
 - https://5166-gamez.github.io/home/
 - https://5166-gamez.pages.dev/
+- https://5166-gamez.vercel.app/
 
 ---
 
