@@ -3,6 +3,11 @@
 **5166 Gamez** is a project that has been running since 2022, originally started on Google Sites, now continuing development powered by GitHub Pages.  
 
 ---
+# Links
+https://5166-gamez.github.io/home/
+https://5166-gamez.pages.dev/
+
+---
 
 # Blog
 ## hi guys - 10/13/2025
