@@ -16,8 +16,8 @@ function loadSection(section) {
   switch (section) {
     case "home":
       content.innerHTML = `
-        <h2>5166 Gamez</h2>
-        <p>USE https://5166-gamez.github.io/home/, CLOUDFLARE PAGES MIGHT BE BLOCKED FOR MOST SCHOOLS</p>
+        <h2>Home</h2>
+        <p>Welcome to 5166 Gamez! Use the buttons below or the header above to navigate pages.</p>
       `;
       break;
 
