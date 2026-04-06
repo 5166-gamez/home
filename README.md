@@ -6,6 +6,7 @@
 # Links
 In case one link is blocked by your school, you have an option of using each link, all using the same version.
 If a link is soft blocked, you can usually wait around a week or two, then it'll be unblocked again.
+in the website, you can access a dropdown in the header that takes you to all available versions of the website.
 - https://5166-gamez.github.io/home/ <-- *recommended!*
 - https://5166-gamez.pages.dev/
 - https://5166-gamez.vercel.app/
