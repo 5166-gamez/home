@@ -1,6 +1,22 @@
-# 5166 Gamez - TEST
+# 5166 Gamez
 
-This is a test version of 5166 gamez.
-This is used to make sure updates are ready to go without having to change it all every 2 seconds.
+**5166 Gamez** is a project that has been running since 2022, originally started on Google Sites, now continuing development powered by GitHub Pages.  
 
-**Expect most things shown in the test version to be final.**
+---
+# Links
+In case one link is blocked by your school, you have an option of using each link, all using the same version.
+If a link is soft blocked, you can usually wait around a week or two, then it'll be unblocked again.
+- https://5166-gamez.github.io/home/ <-- *recommended!*
+- https://5166-gamez.pages.dev/
+- https://5166-gamez.vercel.app/
+
+---
+
+# Blog
+## still working on it - 3/31/2026
+i figured out that github itself is blocked on most computers now so thats kinda bad, BUT ill still use this to say whats been going on and why the website still looks the same.
+IM WORKING ON IT OKAY?!?!?!!? i just now fully picked back up on 5166 since ive kinda been juggling like 30 different projects at once and 5166 is kinda at the bottom-of-the-barrel of priorities for me. this next update focuses on improvements on the site, internally and visually. boring i know, but MOST of the games from the google sites version will be ported over here, alopngside a FEW new games.
+again, sorry this is taking so long. once i actually get a website going i'll start working on adding more games for you guys. thx for reading baiiii
+
+## hi guys - 10/13/2025
+hi guys this is the first blog in the read me, im almost done with a bunch of internal stuff within the site so then i'll be able to actually start adding games and logging updates probably after this so congrats if u actually read this
